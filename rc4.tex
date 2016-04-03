@@ -1,0 +1,44 @@
+\chapter{The RC4 stream cipher}
+\renewcommand{\thealgorithm}{}
+
+
+\begin{algorithm}
+\caption{\textbf{KSA}}
+\label{ksa}
+\begin{algorithmic}
+\State \textit{Initialization:}
+\For{$ i = 0,\cdots, N-1$}
+	\State $S[i] = i$
+\EndFor
+\State $j = 0$
+\State \textit{Scrambling:}
+\For{$ i = 0,\cdots, N-1$}
+	\State $j = j + S[i] + K[i\Mod{l}]$
+\EndFor
+\State \Return{$S$}
+\end{algorithmic}	
+\end{algorithm}
+
+
+
+\begin{algorithm}
+\caption{\textbf{PRGA}}
+\label{prga}
+\begin{algorithmic}
+\State \textit{Initialization}
+\State $i = 0$
+\State $j = 0$
+\State \textit{Keystream generation loop}
+
+\State i = i + 1
+\State j = j + S[i]
+\State Swap(S[i],S[j])
+\State t = S[i] + S[j]
+\State\Return{$S[t]$}
+
+\end{algorithmic}
+\end{algorithm}
+
+\section{Title of the first subchapter of the first chapter}
+
+\section{Title of the second subchapter of the first chapter}

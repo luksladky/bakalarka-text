@@ -40,6 +40,7 @@
 
 \theoremstyle{plain}
 \newtheorem{defn}{Definition}
+\newtheorem*{notation}{Notation}
 
 \theoremstyle{remark}
 \newtheorem*{cor}{Corollary}
@@ -59,17 +60,23 @@
 %%% An environment for typesetting of program code and input/output
 %%% of programs. (Requires the fancyvrb package -- fancy verbatim.)
 
-\DefineVerbatimEnvironment{code}{Verbatim}{fontsize=\small, frame=single}
+%\DefineVerbatimEnvironment{code}{Verbatim}{fontsize=\small, frame=single}
+
+%%% RC4 helpers
+\newcommand{\K}[2]{K[{#1}...{#2}]}
+\newcommand{\InvS}[1]{S^{-1}[{#1}]}
+
 
 %%% The field of all real and natural numbers
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
 
 %%% Useful operators for statistics and probability
-\DeclareMathOperator{\pr}{\textsf{P}}
-\DeclareMathOperator{\E}{\textsf{E}\,}
-\DeclareMathOperator{\var}{\textrm{var}}
-\DeclareMathOperator{\sd}{\textrm{sd}}
+%\DeclareMathOperator{\pr}{\textsf{P}}
+%\DeclareMathOperator{\E}{\textsf{E}\,}
+%\DeclareMathOperator{\var}{\textrm{var}}
+%\DeclareMathOperator{\sd}{\textrm{sd}}
 
 %%% Transposition of a vector/matrix
 \newcommand{\T}[1]{#1^\top}
@@ -81,7 +88,14 @@
 \newcommand{\abs}[1]{\left|{#1}\right|}
 \newcommand{\dint}{\int_0^\tau\!\!\int_0^\tau}
 \newcommand{\isqr}[1]{\frac{1}{\sqrt{#1}}}
+\newcommand{\Mod}[1]{\ \text{mod}\ #1}
 
 %%% Various table goodies
 \newcommand{\pulrad}[1]{\raisebox{1.5ex}[0pt]{#1}}
 \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
+
+
+
+%%% Rename Ensure and Require to Input and Output
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
