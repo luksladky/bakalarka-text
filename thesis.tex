@@ -50,8 +50,10 @@
 %%% Basic information on the thesis
 
 
-\usepackage{algorithm}
+\usepackage[ruled,vlined]{algorithm2e}
 \usepackage{algpseudocode}
+\DontPrintSemicolon
+
 %\usepackage{algorithmic}
 %%% Writing algorithms
 
@@ -119,9 +121,12 @@ Abstract.
 \tableofcontents
 
 %%% Each chapter is kept in a separate file
-%\include{preface}
+\include{preface}
 \include{rc4}
+\include{previous-attacks}
 \include{theory}
+\include{prgareverse}
+\include{key-recovering-algorithm}
 
 \include{epilog}
 
