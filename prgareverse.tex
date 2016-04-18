@@ -1,7 +1,49 @@
 \chapter{Going back to permutation after KSA}
+Nekam napsat, ze to jde snadno ukrást v paměti, když vím detaily implementace (hledam 256 prvků, co jsou permutace). - kdyztak napsat milanovi
+
+
+The internal permutation of RC4 is easy to obtain from the memory. 
+
+Útoky state recovery attacks kombinované s tímto
+
 
 \begin{itemize}
 	\item I have state, $ i,j $, number of rounds. 
 	\item I have state, $ i,j $, not number of rounds. 
 	\item I have state, number of rounds. 
 \end{itemize}
+
+
+
+\begin{algorithm}[]
+	\SetKwInOut{Input}{input}
+	\SetKwInOut{Output}{output}
+	
+	\Input{ Number of rounds $ R $ \newline 
+		    Internal state $ S_{R} $ 
+		  }
+	\Output{Candidates for $ S_{N} $}
+	
+	\Begin{
+		\caption{\textbf{PRGAreverse}}
+		\label{prgareverse}
+
+		\For{$ j_{R} \in \FromTo{0}{N-1} $}{
+			$ i = i_{C} $ \;
+			$ j = R \Mod{N}$ \;
+			$ S = S_{R} $ \;
+ 			$ r = R $ \;
+			\While{$ r > 0 $}{
+				Swap($ S[i] $,$ S[j] $)	\;
+				$ j=j-S[i] $ \;
+				$ i = i - 1 $ \;
+				$ r = r-1 $ \;
+			}
+			\If{j = 0}{try $ S $ as a candidate to $ S_{N} $} \;
+			\textbf{TODO Jak formulovat output?}
+		}
+	
+	}
+\end{algorithm}
+
+If $ i,j $ are known, the algorithm will be similar, only the for loop will disappear and the condition for while loop will be $ i = j = 0 $. On the other side if neither $ j $ nor $ R $ values are known, we need to test all values of $ i,j $ pointers. If the condition $ i = j = 0 $ is fulfilled, it doesn't necessarily mean, that it is the only permutation candidate for chosen $ i,j $. The pointers could be equeal zero also during the PRGA. 
