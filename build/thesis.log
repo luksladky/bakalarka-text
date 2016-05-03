@@ -1,22 +1,13 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.4.2)  18 APR 2016 22:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.26)  2 MAY 2016 21:38
 entering extended mode
-**thesis.tex
-(D:\latex\bakalarka\prace\thesis.tex
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
+**./thesis.tex
+(thesis.tex
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9n> and hyphenation patterns for 69 languages loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
-Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
-File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -32,22 +23,24 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \bibindent=\dimen102
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
-Package: inputenc 2008/03/30 v1.1d Input encoding file
+Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+File: utf8.def 2015/09/07 v1.1p UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
-File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00BB (decimal 187)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C0 (decimal 192)
@@ -168,6 +161,10 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+016F (decimal 367)
    defining Unicode char U+0170 (decimal 368)
    defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
    defining Unicode char U+0178 (decimal 376)
    defining Unicode char U+0179 (decimal 377)
    defining Unicode char U+017A (decimal 378)
@@ -175,6 +172,10 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+017C (decimal 380)
    defining Unicode char U+017D (decimal 381)
    defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
    defining Unicode char U+200C (decimal 8204)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
@@ -194,9 +195,11 @@ Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
-File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+File: ot1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00B8 (decimal 184)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C5 (decimal 197)
@@ -214,6 +217,14 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+0142 (decimal 322)
    defining Unicode char U+0152 (decimal 338)
    defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
    defining Unicode char U+2018 (decimal 8216)
@@ -225,7 +236,7 @@ Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
-File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+File: omsenc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -313,29 +324,31 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\mathtools\mathtools.sty"
-Package: mathtools 2014/07/16 v1.15 mathematical typesetting tools
+(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\mathtools\mathtools.sty
+Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks21
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
-Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count100
 \calc@Bcount=\count101
 \calc@Adimen=\dimen112
 \calc@Bdimen=\dimen113
 \calc@Askip=\skip46
 \calc@Bskip=\skip47
-LaTeX Info: Redefining \setlength on input line 76.
-LaTeX Info: Redefining \addtolength on input line 77.
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count102
 \calc@Cskip=\skip48
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\mathtools\mhsetup.sty"
+(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\mathtools\mhsetup.sty
 Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 )
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \g_MT_multlinerow_int=\count103
@@ -349,7 +362,7 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_below_shortintertext_sep=\dimen120
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
-Package: amsthm 2004/08/06 v2.20
+Package: amsthm 2015/03/04 v2.20.2
 \thm@style=\toks22
 \thm@bodyfont=\toks23
 \thm@headfont=\toks24
@@ -360,22 +373,22 @@ Package: amsthm 2004/08/06 v2.20
 \thm@headsep=\skip52
 \dth@everypar=\toks27
 )
-(C:\Users\admin\AppData\Roaming\MiKTeX\2.9\tex\latex\bbding\bbding.sty
+(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\bbding\bbding.sty
 Package: bbding 1999/04/15 v1.01 Dingbats symbols
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\bm.sty"
-Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
+Package: bm 2014/10/28 v1.1c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup6
 \symboldletters=\mathgroup7
 \symboldsymbols=\mathgroup8
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 138.
-LaTeX Info: Redefining \bm on input line 204.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 207.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
@@ -383,7 +396,7 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 94.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
@@ -399,7 +412,7 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen121
 \Gin@req@width=\dimen122
 )
-(C:\Users\admin\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyvrb\fancyvrb.sty
+(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyvrb\fancyvrb.sty
 Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
@@ -411,14 +424,14 @@ Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix
 \FV@StepNumber=\count107
 \FV@OutFile=\write3
 )
-(C:\Users\admin\AppData\Roaming\MiKTeX\2.9\tex\latex\natbib\natbib.sty
+(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\natbib\natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip53
 \bibsep=\skip54
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count108
 )
-(C:\Users\admin\AppData\Roaming\MiKTeX\2.9\tex\latex\tocbibind\tocbibind.sty
+(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\tocbibind\tocbibind.sty
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
 Package tocbibind Info: The document has chapter divisions on input line 50.
 
@@ -426,17 +439,17 @@ Package tocbibind Info: The document has chapter divisions on input line 50.
 Package tocbibind Note: Using chapter style headings, unless overridden.
 
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\dcolumn.sty"
-Package: dcolumn 2001/05/28 v1.06 decimal alignment package (DPC)
+Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
-Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen123
 \extrarowheight=\dimen124
 \NC@list=\toks28
 \extratabsurround=\skip55
 \backup@length=\skip56
 ))
-(C:\Users\admin\AppData\Roaming\MiKTeX\2.9\tex\latex\booktabs\booktabs.sty
+(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\booktabs\booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen125
 \lightrulewidth=\dimen126
@@ -456,7 +469,7 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count112
 \@thisrulewidth=\dimen137
 )
-(C:\Users\admin\AppData\Roaming\MiKTeX\2.9\tex\latex\paralist\paralist.sty
+(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\paralist\paralist.sty
 Package: paralist 2015/12/30 v2.5 Extended list environments
 \pltopsep=\skip57
 \plpartopsep=\skip58
@@ -464,7 +477,7 @@ Package: paralist 2015/12/30 v2.5 Extended list environments
 \plparsep=\skip60
 \pl@lab=\toks29
 )
-(C:\Users\admin\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
+(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
@@ -530,17 +543,17 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 ))
-(C:\Users\admin\AppData\Roaming\MiKTeX\2.9\tex\latex\algorithm2e\algorithm2e.st
+(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\algorithm2e\algorithm2e.st
 y
 Package: algorithm2e 2013/01/06 v5.00 algorithms environments
 \c@AlgoLine=\count113
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
-Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \algocf@hangindent=\skip61
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\xspace.sty"
-Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
 Package: relsize 2003/07/04 ver 3.1
@@ -587,11 +600,11 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \algocf@algoframe=\box35
 \algocf@algobox=\box36
 )
-(C:\Users\admin\AppData\Roaming\MiKTeX\2.9\tex\latex\algorithmicx\algpseudocode
+(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\algorithmicx\algpseudocode
 .sty
 Package: algpseudocode 
 
-(C:\Users\admin\AppData\Roaming\MiKTeX\2.9\tex\latex\algorithmicx\algorithmicx.
+(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\algorithmicx\algorithmicx.
 sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
@@ -681,7 +694,7 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count127
 
-(C:\Users\admin\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
+(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -721,19 +734,23 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 Package hyperref Info: Option `breaklinks' set `true' on input line 106.
 
 \@input{macros.aux}
-(D:\latex\bakalarka\prace\macros.tex
+\openout2 = `macros.aux'.
+
+(macros.tex
 \c@thm=\count134
 \c@defn=\count135
-)
-(D:\latex\bakalarka\prace\build\thesis.aux
-(D:\latex\bakalarka\prace\build\preface.aux)
-(D:\latex\bakalarka\prace\build\rc4.aux)
-(D:\latex\bakalarka\prace\build\previous-attacks.aux)
-(D:\latex\bakalarka\prace\build\theory.aux)
-(D:\latex\bakalarka\prace\build\prgareverse.aux)
-(D:\latex\bakalarka\prace\build\key-recovering-algorithm.aux)
-(D:\latex\bakalarka\prace\build\epilog.aux)
-(D:\latex\bakalarka\prace\build\bibliography.aux))
+\mylen=\skip83
+) (C:\LUKAS\latex\bakalarka\prace\build\thesis.aux
+(C:\LUKAS\latex\bakalarka\prace\build\preface.aux)
+(C:\LUKAS\latex\bakalarka\prace\build\rc4.aux)
+(C:\LUKAS\latex\bakalarka\prace\build\previous-attacks.aux)
+(C:\LUKAS\latex\bakalarka\prace\build\theory.aux)
+(C:\LUKAS\latex\bakalarka\prace\build\prgareverse.aux)
+(C:\LUKAS\latex\bakalarka\prace\build\key-recovering-algorithm.aux)
+(C:\LUKAS\latex\bakalarka\prace\build\epilog.aux)
+(C:\LUKAS\latex\bakalarka\prace\build\bibliography.aux))
+\openout1 = `thesis.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 116.
 LaTeX Font Info:    ... okay on input line 116.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 116.
@@ -751,7 +768,7 @@ LaTeX Font Info:    ... okay on input line 116.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 116.
 LaTeX Font Info:    ... okay on input line 116.
 
-(C:\Users\admin\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count136
 \scratchdimen=\dimen148
@@ -779,11 +796,13 @@ LaTeX Info: Redefining \ref on input line 116.
 LaTeX Info: Redefining \pageref on input line 116.
 LaTeX Info: Redefining \nameref on input line 116.
 
-(D:\latex\bakalarka\prace\build\thesis.out)
-(D:\latex\bakalarka\prace\build\thesis.out)
+(C:\LUKAS\latex\bakalarka\prace\build\thesis.out)
+(C:\LUKAS\latex\bakalarka\prace\build\thesis.out)
 \@outlinefile=\write4
+\openout4 = `thesis.out'.
 
-(D:\latex\bakalarka\prace\build\thesis.toc
+
+(C:\LUKAS\latex\bakalarka\prace\build\thesis.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 3.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
@@ -795,90 +814,143 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 3.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write5
+\openout5 = `thesis.toc'.
+
  [1
 
 
 
 
-{C:/Users/admin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(D:\latex\bakalarka\prace\preface.tex) [2
+{C:/Users/Lukas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+\openout2 = `preface.aux'.
+
+ (preface.tex)
+Overfull \hbox (862.42633pt too wide) in paragraph at lines 12--124
+[]$[]$ |
+ []
+
+[2
 
 
-] (D:\latex\bakalarka\prace\rc4.tex
+]
+\openout2 = `rc4.aux'.
+
+ (rc4.tex
 Chapter 1.
+
+Package natbib Warning: Citation `RS14' on page 3 undefined on input line 2.
+
+
+Package natbib Warning: Citation `cypherpunks' on page 3 undefined on input lin
+e 2.
+
 [3
 
 
 
-]) [4] (D:\latex\bakalarka\prace\previous-attacks.tex
+]) [4]
+\openout2 = `previous-attacks.aux'.
+
+ (previous-attacks.tex
 Chapter 2.
 ) [5
 
 
 
-] (D:\latex\bakalarka\prace\theory.tex
-Chapter 3.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 19.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
+]
+\openout2 = `theory.aux'.
 
-Overfull \hbox (3.98187pt too wide) in paragraph at lines 47--48
-[]\OT1/cmr/m/it/12 Corollary. []\OT1/cmr/m/n/12 TODO zobec-neni na posledni kol
-o nebo pred-chozi vetu rov-nou smerovat|
+ (theory.tex
+Chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--8
+
  []
 
-[6
+(probability.tex [6
 
 
 
-]) [7] (D:\latex\bakalarka\prace\prgareverse.tex
+])
+
+Package natbib Warning: Citation `GoMa' on page 7 undefined on input line 92.
+
+
+Overfull \hbox (49.71083pt too wide) in paragraph at lines 103--104
+[]\OT1/cmr/m/it/12 Corollary. []$[]$ |
+ []
+
+[7] <img/all.pdf, id=132, 361.35pt x 235.88126pt>
+File: img/all.pdf Graphic file (type pdf)
+ <use img/all.pdf>
+Package pdftex.def Info: img/all.pdf used on input line 180.
+(pdftex.def)             Requested size: 288.7942pt x 188.5181pt.
+) [8]
+[9 <./img/all.pdf>]
+\openout2 = `prgareverse.aux'.
+
+ (prgareverse.tex
 Chapter 4.
+
+Overfull \hbox (45.29327pt too wide) in paragraph at lines 2--3
+\OT1/cmr/m/n/12 PRGA keystream are State re-cov-ery at-tacks $[]$. |
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 16.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 11.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 16.
+
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 18.
+               Default added (so using `htbp') on input line 27.
 
-) [8
+) [10
 
 
 
-] (D:\latex\bakalarka\prace\key-recovering-algorithm.tex
+] [11]
+\openout2 = `key-recovering-algorithm.aux'.
+
+ (key-recovering-algorithm.tex
 Chapter 5.
-) [9
-
-
-
-] (D:\latex\bakalarka\prace\epilog.tex) [10
+) [12
 
 
 
 ]
-(D:\latex\bakalarka\prace\bibliography.tex
-(D:\latex\bakalarka\prace\build\thesis.bbl)) [11
+\openout2 = `epilog.aux'.
+
+ (epilog.tex) [13
 
 
 
 ]
+\openout2 = `bibliography.aux'.
+
+ (bibliography.tex
+No file thesis.bbl.
+)
+
+Package natbib Warning: There were undefined citations.
+
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 160.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 160.
-
-(D:\latex\bakalarka\prace\build\thesis.aux
-(D:\latex\bakalarka\prace\build\preface.aux)
-(D:\latex\bakalarka\prace\build\rc4.aux)
-(D:\latex\bakalarka\prace\build\previous-attacks.aux)
-(D:\latex\bakalarka\prace\build\theory.aux)
-(D:\latex\bakalarka\prace\build\prgareverse.aux)
-(D:\latex\bakalarka\prace\build\key-recovering-algorithm.aux)
-(D:\latex\bakalarka\prace\build\epilog.aux)
-(D:\latex\bakalarka\prace\build\bibliography.aux))
+(C:\LUKAS\latex\bakalarka\prace\build\thesis.aux
+(C:\LUKAS\latex\bakalarka\prace\build\preface.aux)
+(C:\LUKAS\latex\bakalarka\prace\build\rc4.aux)
+(C:\LUKAS\latex\bakalarka\prace\build\previous-attacks.aux)
+(C:\LUKAS\latex\bakalarka\prace\build\theory.aux)
+(C:\LUKAS\latex\bakalarka\prace\build\prgareverse.aux)
+(C:\LUKAS\latex\bakalarka\prace\build\key-recovering-algorithm.aux)
+(C:\LUKAS\latex\bakalarka\prace\build\epilog.aux)
+(C:\LUKAS\latex\bakalarka\prace\build\bibliography.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 160.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 160.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: F2FEE6D426D66C3D12C1DA131313A06A;2198.
+(rerunfilecheck)             Checksum: 1E0A696D1E49AAD9809206F3AFE0EA38;2317.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 160.
  )
 (\end occurred inside a group at level 1)
@@ -886,27 +958,28 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 160.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 13142 strings out of 493921
- 185606 string characters out of 3147283
- 279860 words of memory out of 3000000
- 16157 multiletter control sequences out of 15000+200000
- 12613 words of font info for 46 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 42i,17n,35p,603b,8943s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 13174 strings out of 493634
+ 185655 string characters out of 3143744
+ 286064 words of memory out of 3000000
+ 16264 multiletter control sequences out of 15000+200000
+ 13673 words of font info for 49 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 42i,18n,35p,813b,8962s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
-x12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
-y8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on thesis.pdf (11 pages, 163508 bytes).
+x12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+msy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on thesis.pdf (13 pages, 203415 bytes).
 PDF statistics:
- 202 PDF objects out of 1000 (max. 8388607)
- 47 named destinations out of 1000 (max. 500000)
- 105 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 231 PDF objects out of 1000 (max. 8388607)
+ 57 named destinations out of 1000 (max. 500000)
+ 110 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,50 @@
+\section{\red{Trocha pravdepodobnosti}}
+\begin{defn}
+	A \defined{discrete probability space} is a triple
+	$ (\Omega,\Pr) $ consisting of:
+	
+	\begin{enumerate}
+	\item A nonempty countably infinite set $ \Omega $.
+	\item A function $ \Pr: \Omega \rightarrow R $, called probability measure, 
+	satisfying the following properties:
+		\begin{enumerate}
+			\item $  \forall \omega \in \Omega: 0 \leq Pr(\omega) \leq 1 $ %% positivity
+			\item $ \sum_{\omega \in \Omega}\Pr({\omega}) = 1 $.
+		\end{enumerate}
+	\end{enumerate}
+\end{defn}
+
+\begin{defn}
+	Let $ (\Omega,\Pr) $ be a discrete probability space. An \defined{event} $ E $ is any finite subset of $ \Omega $. The probability of $ E $ is defined as 
+	$ \Pr(E) = \sum_{\omega \in E}\Pr(\omega)  $ and $ \Pr(\emptyset) = 0$.
+\end{defn}
+
+\begin{defn}
+	Let $ (\Omega, \Pr) $ be a discrete probability space and $ E_{1}, E_{2} \subseteq \Omega $  where $ E_{2} \neq 0 $. Then we define \defined{conditional probability} as follows:
+	
+	 \[ Pr(E_{1} | E_{2}) = \dfrac{\Pr(E_{1} \cap E_{2})}{\Pr(E_{2})} \]
+\end{defn}
+
+\begin{lemma}
+	\TODO{zakladni vztahy}
+	\[ \Pr(A \cup B) = \Pr(A) + \Pr(B) - \Pr(A \cap B) \]
+	\[\Pr(\complem{A}) = 1-\Pr(A)\]
+\end{lemma}
+
+
+\begin{defn}
+	We will write, that \red{co to sakra melo byt}
+\end{defn}
+
+\begin{thm}
+	\TODO{veta o uplne pravdepodobnosti}
+\end{thm}
+
+\begin{defn}
+Two events $ A $ and $ B $ are independent (often written as $ A \perp B  $) if and only if their joint probability equals the product of their probabilities:
+
+\[ \Pr{(A \cap B)} = \Pr{(A)}\Pr{(B)}. \]
+\end{defn} 
+	
+	
+\TODO{random distribution, uniform at random}

@@ -1,13 +1,13 @@
 \chapter{The RC4 stream cipher}
-The stream cipher RC4 was designed by Ronald L. Rivest for RSA Data Security in 1987 \cite{RS14}. It was incorporated in RSA's cryptographic library and was first commercially used in Lotus Notes. The RC4 algorithm was trade secret, but it was reverse-engineered and anonymously published in Cypherpunks mailing list  \cite{cypherpunks} in 1994. The code was accepted to be genuine as its output matched the output produced in software using licensed RC4. To avoid trademark issues, the RC4 cipher is often referred to as ARC4 or ARCFOUR, meaning Alleged RC4. 
+The stream cipher RC4 was designed by Ronald L. Rivest for RSA Data Security in 1987 \cite{RS14}. It was incorporated in RSA's cryptographic library and was first commercially used in Lotus Notes. The RC4 algorithm was a trade secret, but it was reverse-engineered and anonymously published in Cypherpunks mailing list  \cite{cypherpunks} in 1994. The code was accepted to be genuine as its output matched the output produced in software using licensed RC4. To avoid trademark issues, the RC4 cipher is often referred to as ARC4 or ARCFOUR, meaning Alleged RC4. 
 
 For its simplicity and speed in software implementation it became very popular. Among implementations in products such as Skype (in modified form), Microsoft Office XP, Lotus Notes or Oracle Secure SQL, it finds application in network protocols such as WEP (Wired Equivalent Privacy), WPA (Wi-Fi Protected Access), SSL (Secure Socket Layer) and formerly in TLS (Transport Layer Security). It has been said that RC4 was the most widely used stream cipher in the world. 
 
 
-TODO lepe napsat, snazili se to ohnout nejak spatne, vzali proudovou sifru a pouzili ji spatne --- wrong mode, podivat se, jak to bylo v nejakem clanku + citace \textbf{KoreK attack}
+\TODO lepe napsat, snazili se to ohnout nejak spatne, vzali proudovou sifru a pouzili ji spatne --- wrong mode, podivat se, jak to bylo v nejakem clanku + citace \textbf{KoreK attack}
 In recent years many attacks have been performed on the cipher, especially on implementations involving wrong use of the initialization vector, such as WEP. In 2015 on the basis of speculations that some state agencies have capabilities to break RC4 used in TLS has IETF published RFC 7565, which prohibited use of RC4 in TLS protocol. Similar recommendation has been issued by Microsoft and Mozilla, but RC4 is still used in many systems, mostly due to legacy reasons or ease of implementation. 
 
-TODO citovat Milana - RC4 skro vsude u viru --- jednoducha na implementaci
+RC4 is also commonly implemented in viruses. Its probably thanks to its shortness and the ease of implementation - it can be implemented in few lines of simple to understand code.
 
 
 \section{Description of the cipher}
@@ -17,49 +17,50 @@ To generate the pseudo random sequence, RC4 uses secret internal state which con
 	\item a permutation of $ \Z_{N} = \FromTo{0}{N-1}$, where $ N = 2^{n} $
 	\item two $n$-bit index pointers $ i,j $ used to randomize permutation table.
 \end{enumerate}
-The pseudo-random pointer $ j $ is secret, but $ i $ is public, its value in any stage of the stream is known. Commonly $ N = 256 $, so $ i$ and $j $ are 8-bit and the cipher is byte-oriented. Key length $ l $ is defined as the number of bytes in the key and can be in range $ 1 \leq l \leq N $.  Most applications uses the key length between 5 -- 16 bytes (corresponding to 40 -- 128 bits key).
+The pseudo-random indice $ j $ is secret, but $ i $ is public, its value in any stage of the stream is known. Commonly $ N = 256 $, so $ i$ and $j $ are 8-bit and the cipher is byte-oriented. Key length $ l $ is defined as the number of bytes in the key and can be in range $ 1 \leq l \leq N $.  Most applications uses the key length between 5 -- 16 bytes (corresponding to 40 -- 128 bits key).
 
-RC4 consists of two algorithms (given bellow), Key-Scheduling Algorithm (KSA), which initializes the internal permutation involving the secret key, and Pseudo-Random Generation Algorithm (PRGA), which uses the permutation to generate pseudo-random bytes. The algorithms are described bellow. \textbf{PRGA is in fact KSA without key byte.??} Any addition related to RC4 will be addition modulo $ N $, unless specified otherwise.
-
-
-
-
-\begin{algorithm}
-
-\caption{\textbf{KSA}}
-\label{ksa}
-\Begin{
-\textit{Initialization:} \;
-$j = 0$ \;
- \textit{Scrambling:} \;
-\For{$ i = 0,\cdots, N-1$}{
- $j = j + S[i] + K[i\Mod{l}]$ \\
-Swap(S[i],S[j])
-}
- \Return{$S$}
-}
-\end{algorithm}
-
-oba vedle sebe --- neco jako minipage
-
-\begin{algorithm}
-	\Begin{
-	\caption{\textbf{PRGA}}
-	\label{prga}
-	\textit{Initialization} \;
-	$i = 0$ \;
-	$j = 0$ \;
-	\textit{Keystream generation loop} \;
-	
-	i = i + 1 \;
-	j = j + S[i] \;
-	Swap(S[i],S[j]) \;
-	t = S[i] + S[j] \;
-	\Return{$S[t]$} \;
-}
-\end{algorithm}
+RC4 consists of two algorithms (given bellow), Key-Scheduling Algorithm (KSA), which initializes the internal permutation involving the secret key, and Pseudo-Random Generation Algorithm (PRGA), which uses the permutation to generate pseudo-random bytes. The algorithms are described bellow. Any addition related to RC4 will be addition modulo $ N $, unless specified otherwise.
 
 
 
-\section{RC4 sucessors/variants}
-
+\begin{minipage}[t]{6.5cm}
+	\vspace{0pt}
+	\begin{algorithm}[H]
+		
+		\caption{\textbf{KSA}}
+		\label{ksa}
+		\KwIn{key $ K $ of length $ l $}
+		\KwOut{permutation $ S $}
+		\Begin{
+			\textit{Initialization:} \;
+			$j = 0$ \;
+			\textit{Scrambling:} \;
+			\For{$ i = 0,\cdots, N-1$}{
+				$j = j + S[i] + K[i\Mod{l}]$ \;
+				Swap(S[i],S[j]) \;
+			}
+			\Return{$S$} \;
+		}
+	\end{algorithm}
+\end{minipage}
+\begin{minipage}[t]{6.5cm}
+	\vspace{0pt}
+	\begin{algorithm}[H]
+		\KwIn{permutation $ S $}
+		\KwOut{one keystream byte}
+		\Begin{
+		\caption{\textbf{PRGA}}
+		\label{prga}
+		\textit{Initialization} \;
+		$i = 0$ ,
+		$j = 0$ \;
+		\textit{Keystream generation loop} \;
+		
+		i = i + 1 \;
+		j = j + S[i] \;
+		Swap(S[i],S[j]) \;
+		t = S[i] + S[j] \;
+		\Return{$S[t]$} \;
+	}
+	\end{algorithm}
+\end{minipage}

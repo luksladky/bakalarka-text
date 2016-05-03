@@ -1,35 +1,44 @@
 \chapter{Going back to permutation after KSA}
-Nekam napsat, ze to jde snadno ukrást v paměti, když vím detaily implementace (hledam 256 prvků, co jsou permutace). - kdyztak napsat milanovi
+In order to perform key recovery attack, it is needed to get the internal state of the cipher first. A class of attacks focused on obtaining the permutation from the PRGA keystream are State recovery attacks \TODO{dopsat state rec utoky na keystream}. 
 
 
-The internal permutation of RC4 is easy to obtain from the memory. 
 
-Útoky state recovery attacks kombinované s tímto
+If we have access to the operation memory and know the details of the implementation, it is easy to find RC4 internal permutation candidates. We can use \textit{sliding window} method to go through the memory and search for permutations on $ N $ items. We are looking on the windows of $ N $ bytes (if $ N < 256 $), sum of which is $ \frac{N(N+1)}{2}. $ If the sum is not correct, we will slide the window, i.e. read new byte, discard the last and update the sum by adding new byte and subtracting last byte value. If the sum is correct, we need to test if the set is permutation, i.e. every value is represented exactly once. 
 
+The indices $ i,j $ are a bit more complicated to determine. Index $ i $ is the number of rounds, therefore the number of keystream output bytes. Index $ j $ is pseudorandom, we need to either know the location in memory of this value or perform an exhaustive search over all $ N $ possible values of $ j $.
+
+
+\TODO{WEP:} Uses with IV --- form a session key. Easily extracted with the knowledge of the session key and initialization vector.
+
+After finding current state of RC4, it is easily possible to trace back to the initial permutation performing state-reversing loop of \textit{PRGAreverse }algorithm. We will need one of the following: 
 
 \begin{itemize}
-	\item I have state, $ i,j $, number of rounds. 
-	\item I have state, $ i,j $, not number of rounds. 
-	\item I have state, number of rounds. 
+	\item The permutation, $ i,j $ and the number of rounds $ R $. 
+	\item The permutation, $ i,j $
+	\item The permutation and number of rounds. 
 \end{itemize}
+\TODO{priklad na deseti prvcich}
+The algoritm \textit{PRGAreverse} describes the last option. If the whole state is known, the algorithm will be trivial, because it will be only necessary to execute the while loop. If only $ i,j $ are known, the algorithm will be similar, only the for loop will disappear and the condition for while loop will be $ i = j = 0 $. On the other side if neither $ j $ nor $ R $ values are known, we need to exhaustive search all values of $ i,j $ pointers. If the condition $ i = j = 0 $ is fulfilled, it does not necessarily mean, that it is the only permutation candidate for chosen $ i,j $. The pointers could be equal zero also during the PRGA, which mean we would need to continue searching for the right state. \TODO{jestli se mi chce, odhadnout pocet kroku}
 
 
 
-\begin{algorithm}[]
+
+
+\begin{algorithm}[] %argument h -- here
 	\SetKwInOut{Input}{input}
 	\SetKwInOut{Output}{output}
 	
-	\Input{ Number of rounds $ R $ \newline 
-		    Internal state $ S_{R} $ 
-		  }
-	\Output{Candidates for $ S_{N} $}
+	\KwIn{Number of rounds $ R $ }
+	\InputNewLine{Internal state $ S_{R} $ }
+	\InputNewLine{$ i_{R} = R \Mod{N}$}
+	\KwOut{Candidates for $ S_{N} $}
 	
 	\Begin{
 		\caption{\textbf{PRGAreverse}}
 		\label{prgareverse}
 
 		\For{$ j_{R} \in \FromTo{0}{N-1} $}{
-			$ i = i_{C} $ \;
+			$ i = i_{R} $ \;
 			$ j = R \Mod{N}$ \;
 			$ S = S_{R} $ \;
  			$ r = R $ \;
@@ -39,11 +48,11 @@ The internal permutation of RC4 is easy to obtain from the memory.
 				$ i = i - 1 $ \;
 				$ r = r-1 $ \;
 			}
-			\If{j = 0}{try $ S $ as a candidate to $ S_{N} $} \;
-			\textbf{TODO Jak formulovat output?}
+			\If{j = 0}{report $ S $ as a candidate to $ S_{N} $} 
 		}
 	
 	}
 \end{algorithm}
 
-If $ i,j $ are known, the algorithm will be similar, only the for loop will disappear and the condition for while loop will be $ i = j = 0 $. On the other side if neither $ j $ nor $ R $ values are known, we need to test all values of $ i,j $ pointers. If the condition $ i = j = 0 $ is fulfilled, it doesn't necessarily mean, that it is the only permutation candidate for chosen $ i,j $. The pointers could be equeal zero also during the PRGA. 
+$ i_{R} = R \Mod{N} $ All subtractions except $ r = r - 1 $ in Algorithm \textit{PRGAreverse} are modulo $ N $. 
+

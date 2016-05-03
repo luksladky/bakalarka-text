@@ -47,6 +47,8 @@
 \newtheorem*{rem}{Remark}
 \newtheorem*{example}{Example}
 
+\newcommand{\defined}[1]{\textit{#1}}
+
 %%% An environment for proofs
 
 %%% FIXME %%% \newenvironment{proof}{
@@ -62,9 +64,14 @@
 
 %\DefineVerbatimEnvironment{code}{Verbatim}{fontsize=\small, frame=single}
 
+%%%% TODO
+\newcommand{\TODO}[1]{\underline{\textbf{TODO} \textcolor{red}{#1}}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+
 %%% RC4 helpers
 \newcommand{\K}[2]{K[{#1}...{#2}]}
-\newcommand{\InvS}[1]{S^{-1}[{#1}]}
+\newcommand{\InvS}{S^{-1}}
 
 
 %%% The field of all real and natural numbers
@@ -90,6 +97,7 @@
 \newcommand{\isqr}[1]{\frac{1}{\sqrt{#1}}}
 \newcommand{\Mod}[1]{\ \text{mod}\ #1}
 \newcommand{\FromTo}[2]{\{#1, ... , #2\} }
+\newcommand{\complem}[1]{\overline{#1}}
 
 
 %%% Various table goodies
@@ -101,3 +109,9 @@
 %%% Rename Ensure and Require to Input and Output
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
 \renewcommand{\algorithmicensure}{\textbf{Output:}}
+%viceradkovy input
+\newlength\mylen
+\newcommand\InputNewLine[1]{%
+	\settowidth\mylen{\KwIn{}}%
+	\setlength\hangindent{\mylen}%
+	\hspace*{\mylen}#1\\}

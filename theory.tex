@@ -1,37 +1,93 @@
 \chapter{Theoretical analysis of the~KSA}
+\TODO{je to po popisu utoku, takze to chce rict, ktery resim } 
+
+This thesis is focused to deriving the secret key from the inner state after KSA. The permutation after the KSA algorithm is biased towards the secret key. Class of key retrieval algorithms which uses the inner state can benefit from that fact to extract complete key or information about some of its bytes. 
+
+There are two types in biases The most likely value y-th element of permutation after complete KSA is
+\TODO{In 1995 Roos observed, that 2}\\
+
+
+\[ S_{N}[y] = \dfrac{y(y+1)}{2} + \K{0}{y}\]
+
+ This equation has high probability on \TODO{formulace} first $ \sim 40 $ entries is
+
+ It is because with hight probability happens event \TODO{event} described bellow. Similarly with last $ \sim 40 $ entries and inverse permutation. 
+
+We can also use the fact, that with certain probability values of indices $ j_{i} $ can be found in the inner permutation or the inverse permutation and using the update rule
+
+\[ j_{i+1} = j_{i} + S[i] + K[i\Mod{l}] \].
+
+
+\TODO{Roos in 1995 } 
+
+%[6] noticed that some of the elements of the initial permutations have a
+%bias towards a linear combination of the secret key bytes. A theoretical proof of these
+%biases was given by Paul and Maitra [5], later generalized by Biham and Carmeli [2].
+%Thanks to our choice C[−1] = 0, these results can be given in a unified theorem as
+%	follows.
+
+Most likely value of , denoted $ S_{N}[y] $, is given by 
+\[ S_{N}[y] = \dfrac{y(y+1)}{2} + \K{0}{y} \]
+
 
 Hlavni myslenka, nektere klice jsou pravdepodobnejsi nez jine, z toho vnitrniho stavu!! 
 
+We will use both facts in the key retrieval algorithm.
 
 
 
+%%%%%%%%%%% Probability introduction %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{probability}
 
 
 
-\begin{thm}
-	Probability of the product of independent events is the product of probabilities, implicitly assumed it is independent. 
-\end{thm}
-
+%%%%%%%%%%% Notations                %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Notations and basic assumptions}
 
 \begin{notation}
+	Let $ K $ be the array of key bytes \red{with} length $ l $. We will \red{denote} 
 	
-	\begin{itemize}
-		\item 	$ \K{a}{b} \coloneqq \sum\limits_{i=a}^{b}K[i]$
-		
-		\item 	Let $ j_{i} $ be the pointer $ j $ in i-th round of the KSA. 
-	\end{itemize}
+	\[\K{a}{b} \coloneqq \sum\limits_{i=a}^{b}K[i \Mod{l}] 	\]
 	
+	The indice $ j $ in $ r $-th round of the KSA will be noted $ j_{r} $, the permutation after $ r $ rounds will be $ S_{r} $. Therefore $ S_{N} $ is the permutation after complete KSA.
+	
+	$ 	\InvS $ will stand for the inverse of the permutation $ S $, i.e. $ \forall y \in \FromTo{0}{N-1}: S[y] = v \Rightarrow \InvS[v] = y$.
+	
+
+	\red{Mozna jeste $ K[a] = K[a \Mod{l}] $}
 \end{notation}
 
+
+%%%%%%%%%%% Prvni bias %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Roos bias}
+
+
+	%%% Prerekvizita vety 
 	\begin{lemma}
-		TODO prerekvizita vety 1
-	\end{lemma}
+		\red{prerekvizita vety 1}
+		Assume that the index $ j $ takes its value from $ \Z_{N}  $ uniformly at random at each round of the KSA. Then $ \forall y \in \Z_{N} $:
+		
+		\[ \Pr\Big(j_{y+1} = \dfrac{y(y+1)}{2} + \K{0}{y} \Big) 
+		\approx 
+		\Big(\dfrac{N-1}{N}\Big)^{1+\frac{y(y+1)}{2}} + \dfrac{1}{N}
+		\]
+		
+	\end{lemma}		
+	\begin{proof}
+		Let $ E_{y} $ denote the event that $ j_{y+1} = \sum_{x=0}^{y}(y + K[x mod l])$
+	\end{proof}	
 	
+	%%% Prerekvizita vety 	
 	\begin{lemma}
-		TODO prerekvizita vety 1
+		\TODO{prerekvizita vety 1}
 	\end{lemma}
-	
+
+
+
 	
 	\begin{thm}{\cite{GoMa}}
 		Assume that during the KSA the index j takes its values uniformly at random from $ \Z_{N} $. Then $ \forall 0 \leq i \leq r-1, 1 \leq r \leq N $
@@ -40,16 +96,16 @@ Hlavni myslenka, nektere klice jsou pravdepodobnejsi nez jine, z toho vnitrniho 
 	\end{thm}
 	
 	\begin{proof}
-		TODO
+		\TODO{dukaz}
 	\end{proof}
 	
 	\begin{cor}
-		TODO zobecneni na posledni kolo nebo predchozi vetu rovnou smerovat tam?
+	\TODO{zobecneni na posledni kolo nebo predchozi vetu rovnou smerovat tam?}
 \end{cor}
 	
-TODO tabulka s aktualnimi hodnotami 
+\TODO{tabulka s aktualnimi hodnotami } 
 
-TODO to same pro InvS
+\TODO{to same pro InvS} 
 
 
 \begin{thm}
@@ -59,17 +115,19 @@ TODO to same pro InvS
 	clanek 4, appendix, na zacatku graf
 \end{thm}
 
-TODO - tabulka s aktualnimi hodnotami, dukaz
+\TODO{tabulka s aktualnimi hodnotami, dukaz}
 
 
+\begin{notation}
+		\[  C_{y} = S_{N}[y] - \dfrac{y(y+1)}{2} \]
+\end{notation}
+
+\TODO{zobecneni na sekvence}
 
 
-TODO zobecneni na sekvence
+\TODO{inverzni sekvence}
 
-
-TODO inverzni sekvence
-
-TODO vyyiti tohoto na ziskani klice - rovnice
+\TODO{vyyiti tohoto na ziskani klice - rovnice} 
 
 
 \section{Substracting equations}
@@ -80,6 +138,9 @@ Let $i_{1} < i_{2} $. If $ C_{i_{1}} = \K{0}{i_{1}} $ and $ C_{i_{2}} = \K{0}{i_
 This holds with the product of the individual probabilities of $ C_{i} $
 
 
+
+%%%%%%%%%%% Druhy bias               %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Useful distributions for The Key Recovering Algorithm}
 
 \begin{defn}
@@ -108,11 +169,21 @@ If $ j_{i} = S[i] $, we call this as event 1 has occured for index $ i $, and de
 \end{thm}
 
 
-TODO $ P(S[S[i]] = j_{i}) $ - dukazy nikde nejsou...
+\TODO{ $ P(S[S[i]] = j_{i}) $ - dukazy nikde nejsou...}
 
-TODO $ P(S^{-1}[S^{-1}[i]] = j_{i}) $
+\TODO{ $ P(S^{-1}[S^{-1}[i]] = j_{i}) $}
 
-TODO $ P(S[S[S[i]] = j_{i}) $
+\TODO{ $ P(S[S[S[i]] = j_{i}) $}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{img/all}
+\caption[All]{hallo}
+\label{fig:all}
+\end{figure}
+
+
+\TODO{experimentalne... rychle to konverguje}
 
 
 
