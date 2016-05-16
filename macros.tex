@@ -65,7 +65,7 @@
 %\DefineVerbatimEnvironment{code}{Verbatim}{fontsize=\small, frame=single}
 
 %%%% TODO
-\newcommand{\TODO}[1]{\underline{\textbf{TODO} \textcolor{red}{#1}}}
+\newcommand*{\TODO}[1]{\textnormal{\texttt{ \textcolor{blue}{\textbf{\underline{TODO} }#1}}}}
 \newcommand{\red}[1]{\textcolor{red}{#1}}
 
 
@@ -98,6 +98,8 @@
 \newcommand{\Mod}[1]{\ \text{mod}\ #1}
 \newcommand{\FromTo}[2]{\{#1, ... , #2\} }
 \newcommand{\complem}[1]{\overline{#1}}
+\newcommand{\cond}{\, | \,}
+%\newcommand{\P}{\Pr}
 
 
 %%% Various table goodies

@@ -1,13 +1,14 @@
+\select@language {english}
 \contentsline {chapter}{Introduction}{2}{chapter*.2}
 \contentsline {chapter}{\numberline {1}The RC4 stream cipher}{3}{chapter.1}
 \contentsline {section}{\numberline {1.1}Description of the cipher}{3}{section.1.1}
 \contentsline {chapter}{\numberline {2}Previous attacks}{5}{chapter.2}
-\contentsline {chapter}{\numberline {3}Theoretical analysis of the\nobreakspace {}KSA}{6}{chapter.3}
-\contentsline {section}{\numberline {3.1}\leavevmode {\color {red}Trocha pravdepodobnosti}}{6}{section.3.1}
-\contentsline {section}{\numberline {3.2}Notations and basic assumptions}{7}{section.3.2}
-\contentsline {section}{\numberline {3.3}Roos bias}{7}{section.3.3}
-\contentsline {section}{\numberline {3.4}Substracting equations}{8}{section.3.4}
-\contentsline {section}{\numberline {3.5}Useful distributions for The Key Recovering Algorithm}{8}{section.3.5}
-\contentsline {chapter}{\numberline {4}Going back to permutation after KSA}{10}{chapter.4}
-\contentsline {chapter}{\numberline {5}The Key Recovering Algorithm}{12}{chapter.5}
-\contentsline {chapter}{Conclusion}{13}{chapter*.3}
+\contentsline {chapter}{\numberline {3}Preliminaries}{6}{chapter.3}
+\contentsline {chapter}{\numberline {4}Theoretical analysis of the~KSA}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}Notations and basic assumptions}{7}{section.4.1}
+\contentsline {section}{\numberline {4.2}Bias towards the sequence sums of key bytes}{7}{section.4.2}
+\contentsline {section}{\numberline {4.3}Substracting equations}{12}{section.4.3}
+\contentsline {section}{\numberline {4.4}Useful distributions for The Key Recovering Algorithm}{13}{section.4.4}
+\contentsline {chapter}{\numberline {5}Going back to permutation after KSA}{14}{chapter.5}
+\contentsline {chapter}{\numberline {6}The Key Recovering Algorithm}{16}{chapter.6}
+\contentsline {chapter}{Conclusion}{17}{chapter*.3}

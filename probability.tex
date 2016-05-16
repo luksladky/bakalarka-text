@@ -1,6 +1,13 @@
-\section{\red{Trocha pravdepodobnosti}}
+
+%%%%%%%%%%% Probability introduction %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Preliminaries}
+
+\TODO{kapitolu dodelat pozdeji}
+\TODO{k tomuto nejaky uvod?}
 \begin{defn}
-	A \defined{discrete probability space} is a triple
+	A \defined{discrete probability space} is a pair
 	$ (\Omega,\Pr) $ consisting of:
 	
 	\begin{enumerate}
@@ -32,19 +39,30 @@
 \end{lemma}
 
 
-\begin{defn}
-	We will write, that \red{co to sakra melo byt}
-\end{defn}
-
 \begin{thm}
+	(The law of total probability)
+	
+	\begin{equation}\label{totalProb}
+	\Pr(E) = \sum_{n}\Pr(A \cap B_{n}) = \sum_{n}\Pr(A \, | \, B_{n})\Pr(B_{n})
+	\end{equation}
+	
+	
+	
 	\TODO{veta o uplne pravdepodobnosti}
 \end{thm}
+
+\begin{defn}
+	\TODO{\textbf{Uniform distributio}n takto nebo musim zavadet jevy jako zobrazeni?}
+	$ \forall \omega \in \Omega : \Pr(\omega) = \dfrac{1}{|\Omega|} $
+\end{defn}
 
 \begin{defn}
 Two events $ A $ and $ B $ are independent (often written as $ A \perp B  $) if and only if their joint probability equals the product of their probabilities:
 
 \[ \Pr{(A \cap B)} = \Pr{(A)}\Pr{(B)}. \]
 \end{defn} 
+
+\begin{notation}
+		\red{$ \complem{A} $ is complementary event to $ A $}
+\end{notation}
 	
-	
-\TODO{random distribution, uniform at random}
